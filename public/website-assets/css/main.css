@@ -1084,7 +1084,7 @@ body.no-scroll {
 .heroSection .swiper .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: 5s;
 }
 
@@ -1275,6 +1275,35 @@ body.no-scroll {
   overflow: hidden;
 }
 
+ .iconSound {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: inline-flex;
+}
+
+ .iconSound>span {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+ video:not([muted])+.iconSound .unmute {
+  display: none;
+}
+
+ video[muted]+.iconSound .mute {
+  display: none;
+}
+
+ .iconSound>span svg {
+  width: 2rem;
+  height: auto;
+}
+
+ .iconSound>span svg [fill] {
+  fill: #181c22;
+}
+
 .allReels .boxImg {
   width: 100%;
 }
@@ -1307,8 +1336,6 @@ body.no-scroll {
   top: 1rem;
   z-index: 9;
   display: inline-flex;
-  background-color: var(--color2);
-  border-radius: 4px;
 }
 
 .reels .swiper-slide .social svg {
@@ -1316,9 +1343,26 @@ body.no-scroll {
   height: auto;
 }
 
-.reels .swiper-slide .social [fill] {
-  fill: #fff;
+.reels .swiper-slide .social.facebook [fill] {
+  fill: #006AF7;
 }
+
+.reels .swiper-slide .social.instagram [fill] {
+  fill: #EC0051;
+}
+
+.reels .swiper-slide .social.x [fill] {
+  fill: #000000;
+}
+
+.reels .swiper-slide .social.youtube [fill] {
+  fill: #FF0000;
+}
+
+.reels .swiper-slide .social.telegram [fill] {
+  fill: #00A9EF;
+}
+
 
 .reels .swiper-button-prev,
 .reels .swiper-button-next,
@@ -2741,7 +2785,7 @@ body.no-scroll {
   object-fit: contain;
 }
 
-.singleReel .content .boxVideo .icon {
+.singleReel .content .boxVideo div.icon {
   position: absolute;
   right: 50%;
   top: 50%;
@@ -2750,14 +2794,14 @@ body.no-scroll {
   color: #fff;
 }
 
-.singleReel .content .boxVideo .icon svg {
+.singleReel .content .boxVideo div.icon svg {
   width: 4rem;
 }
 
 .prevNextReel {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -2771,7 +2815,7 @@ body.no-scroll {
   border-radius: 4px;
 }
 
-.singleReel .content video:not(.paused)+.icon .play {
+.singleReel .content video:not(.paused)~.icon .play {
   display: none;
 }
 

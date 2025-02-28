@@ -490,6 +490,7 @@ return [
   'image'=>'صورة',
   'media_type_id'=>'البطاقه التفاعلية ',
   'related advisory'=>'فتاوى متعلقة',
+  'please insert name of advisory for del' => 'الرجاء كتابة عنوان الفتوى المطلوب حذفها للتأكيد',
 
 
 ];

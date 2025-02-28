@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+ 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class Advisory extends Model
 {
@@ -68,5 +70,13 @@ class Advisory extends Model
         return $this->hasOne(ContentStar::class, 'id', 'star_id');
     }
  
+    
+protected static function booted() 
+{
+    static::addGlobalScope('activation',function(Builder $builder){
+    
+        $builder->where('active',1);
+    });
+}
     
 }

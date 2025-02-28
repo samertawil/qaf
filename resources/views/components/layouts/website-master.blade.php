@@ -826,7 +826,7 @@
     </div>
     <script src="{{ asset('website-assets/js/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('website-assets/assest_live/plyr.min.js') }}"></script>
-    {{-- <script src="{{ asset('website-assets/assest_live/hls.min.js') }}"></script> --}}
+    <script src="{{ asset('website-assets/assest_live/hls.min.js') }}"></script>
     <script src="{{ asset('website-assets/assest_live/script.js') }}"></script>
     <script src="{{ asset('website-assets/js/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('website-assets/js/main.js') }}"></script>

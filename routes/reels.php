@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Dashboard\Reels\Edit;
 use App\Livewire\Dashboard\Reels\Index;
 use App\Livewire\Dashboard\Reels\Create;
+use App\Livewire\Website\Pages\Reels\ReelShow;
 use App\Livewire\Website\Pages\Reels\ReelsList;
  
  
@@ -16,3 +17,4 @@ Route::prefix('/reels')->name('reels.')->middleware(['web'])->group(function () 
 });
 
 Route::get('reels/list', ReelsList::class)->name('reels.list');
+Route::get('reel/show/{id}', ReelShow::class)->name('reel.show');

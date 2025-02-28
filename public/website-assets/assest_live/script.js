@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const source = 'https://customer-9vqui33qma2rownb.cloudflarestream.com/7792e558fe54e23bdd4b462ec275cdba/manifest/video.m3u8';
-  const video = document.querySelector('video');
+  const video = document.querySelector('video.live');
 
   const defaultOptions = {};
 
